@@ -1,41 +1,75 @@
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Footer = () => {
+
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!email) return alert("Enter email");
+
+    const templateParams = {
+      user_email: email
+    };
+
+    emailjs.send(
+      "service_s96cdab",
+      "template_fe93kuv",
+      templateParams,
+      "WOIj-eUz-_2tq-fOK"
+    )
+    .then(() => {
+      alert("Email sent successfully ✅");
+      setEmail("");
+    })
+    .catch(() => {
+      alert("Failed to send ❌");
+    });
+  };
+
   return (
     <div className="text-white px-6 md:px-0 md:mx-20 flex flex-col pb-16 md:pb-24 gap-8">
       
       {/* Top Section */}
-      <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-0 md:mx-20">
+      <div className="flex flex-col md:flex-row justify-between gap-10 md:mx-20">
         
         {/* Left */}
-        <div className="md:mr-48 text-center md:text-left max-w-md">
+        <div className="max-w-md text-center md:text-left">
           <h1 className="text-2xl font-semibold">Rajesh Kanna</h1>
-          <br />
-          <h3 className="text-sm md:text-base text-gray-300">
-            Full Stack Developer building modern, responsive, and high-performance 
-            web applications. I help businesses and startups create impactful 
-            digital experiences.
+          <h3 className="text-sm text-gray-300 mt-2">
+            Full Stack Developer building modern web applications.
           </h3>
         </div>
 
-        {/* Right (Newsletter / Contact CTA) */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 md:pt-10">
+        {/* Right (Email Form) */}
+        <form 
+          onSubmit={handleSubmit}
+          className="flex flex-col sm:flex-row items-center gap-4"
+        >
           <input 
             type="email" 
-            placeholder="Enter your email" 
-            className="bg-slate-600 focus:outline-none px-4 py-3 rounded-full w-full sm:w-auto"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your email"
+            required
+            className="bg-slate-600 px-4 py-3 rounded-full w-full sm:w-auto focus:outline-none"
           />
-          <button className='bg-gradient-to-r from-[#e908c4] to-[#DA7C25] px-6 py-3 rounded-full text-sm md:text-base'>
-            Get Updates
+
+          <button 
+            type="submit"
+            className='bg-gradient-to-r from-[#e908c4] to-[#DA7C25] px-6 py-3 rounded-full'>
+            Subscribe
           </button>
-        </div>
+        </form>
 
       </div>
 
       {/* Divider */}
       <hr className="border-white/30 md:mx-20" />
       
-      {/* Bottom Section */}
+      {/* Bottom */}
       <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:mx-20 text-center md:text-left">
         
         <div>

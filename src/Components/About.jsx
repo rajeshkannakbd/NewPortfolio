@@ -49,7 +49,7 @@ const About = () => {
         
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#e908c4] to-[#DA7C25] bg-clip-text text-transparent">
-            3+
+            7+
           </h1>
           <h2 className="text-lg md:text-2xl">Projects Completed</h2>
         </div>
@@ -58,7 +58,7 @@ const About = () => {
 
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#e908c4] to-[#DA7C25] bg-clip-text text-transparent">
-            1+
+            2+
           </h1>
           <h2 className="text-lg md:text-2xl">Years of Learning & Building</h2>
         </div>

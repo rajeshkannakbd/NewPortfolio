@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/logo.svg";
+import logo from "../assets/ChatGPT Image Apr 1, 2026, 03_20_24 PM.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,7 +12,7 @@ const Navbar = () => {
         
         {/* Logo */}
         <div>
-          <img src={logo} alt="logo" className="w-28 md:w-auto" />
+          <img src={logo} alt="logo" className="w-28 h-12 pt-2 items-center justify-center md:w-auto" />
         </div>
 
         {/* Hamburger */}
