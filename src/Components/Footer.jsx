@@ -2,38 +2,58 @@ import React from "react";
 
 const Footer = () => {
   return (
-     <div className="text-white mx-20 flex flex-col pb-24 gap-8">
-      <div className="flex mx-32 justify-between">
-        <div className="mr-48">
-          <h1>Rajesh</h1>
+    <div className="text-white px-6 md:px-0 md:mx-20 flex flex-col pb-16 md:pb-24 gap-8">
+      
+      {/* Top Section */}
+      <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-0 md:mx-20">
+        
+        {/* Left */}
+        <div className="md:mr-48 text-center md:text-left max-w-md">
+          <h1 className="text-2xl font-semibold">Rajesh Kanna</h1>
           <br />
-          <h3>
-            I am a frontend developer from, USA with 10 years of experience in
-            companies like Microsoft, Tesla and Apple.
+          <h3 className="text-sm md:text-base text-gray-300">
+            Full Stack Developer building modern, responsive, and high-performance 
+            web applications. I help businesses and startups create impactful 
+            digital experiences.
           </h3>
         </div>
-        <div className="flex h-10 items-center pt-16 pl-20 justify-center gap-4">
-          <input type="text" placeholder="Enter Your Email" className="bg-slate-600 focus:outline-none p-3 rounded-full" />
-          <button className='bg-gradient-to-r from-[#e908c4] to-[#DA7C25] p-2 rounded-full mr-52'>Subscribe</button>
+
+        {/* Right (Newsletter / Contact CTA) */}
+        <div className="flex flex-col sm:flex-row items-center gap-4 md:pt-10">
+          <input 
+            type="email" 
+            placeholder="Enter your email" 
+            className="bg-slate-600 focus:outline-none px-4 py-3 rounded-full w-full sm:w-auto"
+          />
+          <button className='bg-gradient-to-r from-[#e908c4] to-[#DA7C25] px-6 py-3 rounded-full text-sm md:text-base'>
+            Get Updates
+          </button>
         </div>
+
       </div>
 
-      <hr className="border-white/30 mx-32" />
+      {/* Divider */}
+      <hr className="border-white/30 md:mx-20" />
       
-      <div className="flex justify-between mx-32">
+      {/* Bottom Section */}
+      <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:mx-20 text-center md:text-left">
+        
         <div>
-          <h3>© 2026 Alex Bennett. All rights reserved.</h3>
+          <h3 className="text-sm md:text-base">
+            © 2026 Rajesh Kanna. All rights reserved.
+          </h3>
         </div>
-        <div className="flex justify-between">
-          <ul className="flex gap-14 mx-12">
-            <li>Term of Services</li>
-            <li>Privacy Policy</li>
-            <li>Connect with me</li>
+
+        <div>
+          <ul className="flex flex-col md:flex-row gap-4 md:gap-10">
+            <li className="cursor-pointer hover:text-[#DA7C25]">Terms of Service</li>
+            <li className="cursor-pointer hover:text-[#DA7C25]">Privacy Policy</li>
+            <li className="cursor-pointer hover:text-[#DA7C25]">Contact</li>
           </ul>
         </div>
+
       </div>
     </div>
-
   );
 };
 

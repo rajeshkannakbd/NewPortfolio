@@ -2,35 +2,57 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className=" text-white flex flex-col items-center justify-center pb-28">
-      <div className=" ">
-        <h1 className=" text-2xl pb-12 ">My Services</h1>
+    <div className="text-white flex flex-col items-center justify-center md:mx-28  pb-20 md:pb-28 px-6 md:px-0">
+      
+      {/* Title */}
+      <div>
+        <h1 className="text-2xl md:text-3xl pb-10 md:pb-12 font-semibold">
+          My Services
+        </h1>
       </div>
-      <div className=" flex gap-20">
-        <div className="  rounded-lg bg-gradient-to-r from-[#e908c4] to-[#DA7C25] p-1 text-2xl font-royal-body">
-          <div className="bg-black hover:bg-gradient-to-r hover:from-[#e908c4] hover:to-[#DA7C25] w-96 text-white p-6 rounded-[calc(1rem-1px)]">
-            <h3 className=" p-3">01</h3>
-            <h2>Frontend Development</h2>
-            <h5 className=" text-sm">Full stack web apps, The combination of the frontend and bakend that gives the full working web apps</h5>
-            <h4 className=" pt-4">Read More</h4>
+
+      {/* Cards */}
+      <div className="flex flex-col md:flex-row gap-8 md:gap-20">
+        
+        {/* Card 1 */}
+        <div className="rounded-lg bg-gradient-to-r from-[#e908c4] to-[#DA7C25] p-[1px] text-lg md:text-2xl font-royal-body w-full md:w-auto">
+          <div className="bg-black hover:bg-gradient-to-r hover:from-[#e908c4] hover:to-[#DA7C25] text-white p-6 rounded-[calc(1rem-1px)] transition-all duration-300">
+            <h3 className="p-2 text-sm md:text-base">01</h3>
+            <h2 className="text-xl md:text-2xl font-semibold">Frontend Development</h2>
+            <h5 className="text-sm mt-2 text-gray-300">
+              I build modern, responsive, and user-friendly interfaces that deliver 
+              smooth user experiences across all devices.
+            </h5>
+            <h4 className="pt-4 text-sm md:text-base">Learn More →</h4>
           </div>
         </div>
-        <div className="  rounded-lg bg-gradient-to-r from-[#e908c4] to-[#DA7C25] p-1 text-2xl font-royal-body">
-          <div className="bg-black hover:bg-gradient-to-r hover:from-[#e908c4] hover:to-[#DA7C25] w-96 text-white p-6 rounded-[calc(1rem-1px)]">
-            <h3 className=" p-3">02</h3>
-            <h2>Backend Development</h2>
-            <h5 className=" text-sm">Full stack web apps, The combination of the frontend and bakend that gives the full working web apps</h5>
-            <h4 className=" pt-4">Read More</h4>
+
+        {/* Card 2 */}
+        <div className="rounded-lg bg-gradient-to-r from-[#e908c4] to-[#DA7C25] p-[1px] text-lg md:text-2xl font-royal-body w-full md:w-auto">
+          <div className="bg-black hover:bg-gradient-to-r hover:from-[#e908c4] hover:to-[#DA7C25] text-white p-6 rounded-[calc(1rem-1px)] transition-all duration-300">
+            <h3 className="p-2 text-sm md:text-base">02</h3>
+            <h2 className="text-xl md:text-2xl font-semibold">Backend Development</h2>
+            <h5 className="text-sm mt-2 text-gray-300">
+              I develop secure, scalable backend systems, APIs, and databases to power 
+              fast and reliable web applications.
+            </h5>
+            <h4 className="pt-4 text-sm md:text-base">Learn More →</h4>
           </div>
         </div>
-        <div className="  rounded-lg bg-gradient-to-r from-[#e908c4] to-[#DA7C25] p-1 text-2xl font-royal-body">
-          <div className="bg-black hover:bg-gradient-to-r hover:from-[#e908c4] hover:to-[#DA7C25] w-96 text-white p-6 rounded-[calc(1rem-1px)]">
-            <h3 className=" p-3">03</h3>
-            <h2>FullStack Development</h2>
-            <h5 className=" text-sm">Full stack web apps, The combination of the frontend and bakend that gives the full working web apps</h5>
-            <h4 className=" pt-4">Read More</h4>
+
+        {/* Card 3 */}
+        <div className="rounded-lg bg-gradient-to-r from-[#e908c4] to-[#DA7C25] p-[1px] text-lg md:text-2xl font-royal-body w-full md:w-auto">
+          <div className="bg-black hover:bg-gradient-to-r hover:from-[#e908c4] hover:to-[#DA7C25] text-white p-6 rounded-[calc(1rem-1px)] transition-all duration-300">
+            <h3 className="p-2 text-sm md:text-base">03</h3>
+            <h2 className="text-xl md:text-2xl font-semibold">Full Stack Development</h2>
+            <h5 className="text-sm mt-2 text-gray-300">
+              Complete web solutions from frontend to backend — helping you launch 
+              fully functional, high-performance applications.
+            </h5>
+            <h4 className="pt-4 text-sm md:text-base">Learn More →</h4>
           </div>
         </div>
+
       </div>
     </div>
   );

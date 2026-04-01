@@ -1,59 +1,77 @@
 import React from "react";
 import themePattern from "../assets/theme_pattern.svg";
+import profile from "../assets/WhatsApp Image 2026-03-04 at 1.56.53 PM.jpeg";
 
 const About = () => {
   return (
-    <div className=" flex flex-col text-white pt-24">
+    <div className="flex flex-col text-white pt-16 md:mx-44 md:pt-24 px-6 md:px-0">
+      
+      {/* Title */}
       <div>
         <center>
-          <h1 className=" text-2xl">About Me</h1>
+          <h1 className="text-2xl md:text-3xl font-semibold">About Me</h1>
         </center>
-        {/* <img src={themePattern} alt="" /> */}
       </div>
-      <div className=" flex pt-12 mx-8 ml-40 ">
+
+      {/* Content */}
+      <div className="flex flex-col md:flex-row items-center pt-10 md:pt-12 gap-10 md:gap-16 md:mx-20">
+        
+        {/* Image */}
         <div>
           <img
-            className=" w-96 rounded-3xl"
-            src="src/assets/WhatsApp Image 2026-03-04 at 1.56.53 PM.jpeg"
-            alt=""
+            className="w-64 md:w-96 rounded-3xl"
+            src={profile}
+            alt="Rajesh Kanna"
           />
         </div>
-        <div className=" mx-20 text-lg">
+
+        {/* Text */}
+        <div className="text-sm md:text-lg text-center md:text-left max-w-xl">
           <h3>
-            I'm a final yaer Btech Information Technology studenet passionate
-            about software development especially in MERN stack and i can build
-            scalabel applications, and I'm curenntly seeking for fulltime role
-            or Inter to develop my skills and contribute the company{" "}
+            I’m a passionate Full Stack Developer specializing in the MERN stack, 
+            focused on building scalable and high-performance web applications. 
+            I help businesses and startups turn their ideas into modern, responsive 
+            digital products.
           </h3>
+
           <br />
+
           <h3>
-            My passion for fullstack development is not only reflected in my
-            extensive experience but also in the enthusiasm and dedication I
-            bring to each project.
+            With hands-on experience in real-world projects, I bring strong problem-solving 
+            skills, clean code practices, and a commitment to delivering quality results. 
+            I’m currently open to freelance projects and full-time opportunities.
           </h3>
         </div>
       </div>
-      <div className=" flex justify-evenly p-20">
-        <div className=" pt-16">
-          <h1 className="  text-5xl font-bold bg-gradient-to-r from-[#e908c4] to-[#DA7C25] bg-clip-text text-transparent text-center">
+
+      {/* Stats */}
+      <div className="flex flex-col md:flex-row justify-evenly items-center gap-10 md:gap-0 p-10 md:p-20">
+        
+        <div className="text-center">
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#e908c4] to-[#DA7C25] bg-clip-text text-transparent">
             3+
           </h1>
-          <h2 className=" text-2xl">Years Of Experience</h2>
+          <h2 className="text-lg md:text-2xl">Projects Completed</h2>
         </div>
-        <div className="w-px h-64 bg-gradient-to-b from-transparent via-yellow-500 to-transparent opacity-50"></div>
-        <div className=" pt-16">
-          <h1 className="  text-5xl font-bold bg-gradient-to-r from-[#e908c4] to-[#DA7C25] bg-clip-text text-transparent text-center">
-            3+
+
+        <div className="hidden md:block w-px h-64 bg-gradient-to-b from-transparent via-yellow-500 to-transparent opacity-50"></div>
+
+        <div className="text-center">
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#e908c4] to-[#DA7C25] bg-clip-text text-transparent">
+            1+
           </h1>
-          <h2 className=" text-2xl">Years Of Experience</h2>
+          <h2 className="text-lg md:text-2xl">Years of Learning & Building</h2>
         </div>
-        <div className="w-px h-64 bg-gradient-to-b from-transparent via-yellow-500 to-transparent opacity-50"></div>
-        <div className=" pt-16">
-          <h1 className="  text-5xl font-bold bg-gradient-to-r from-[#e908c4] to-[#DA7C25] bg-clip-text text-transparent text-center">
-            3+
+
+        <div className="hidden md:block w-px h-64 bg-gradient-to-b from-transparent via-yellow-500 to-transparent opacity-50"></div>
+
+        <div className="text-center">
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#e908c4] to-[#DA7C25] bg-clip-text text-transparent">
+            100%
           </h1>
-          <h2 className=" text-2xl">Years Of Experience</h2>
+          <h2 className="text-lg md:text-2xl">Commitment to Quality</h2>
         </div>
+
       </div>
     </div>
   );
